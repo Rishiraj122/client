@@ -6,28 +6,6 @@ import Header from '../components/Header.js'
 const StudentMyDetails = () => {
 	const history = useHistory()
 
-	const notice=()=>{
-		window.location.href='/noticedisplay'
-	}
-	const logout=()=>{
-        window.localStorage.clear();
-        window.location.href='/studentlogin'
-    }
-
-	const myBill=()=>{
-		window.location.href="/mybill"
-	}
-
-	const menu=()=>{
-		window.location.href='/menudisplay'
-	}
-
-	
-	const myDetails=()=>{
-		window.location.href='#myDetails'
-	}
-
-
 	const [data, setData]= useState([])
 	const [phone, setPhone] = useState([])
 	const [email, setEmail] = useState([])

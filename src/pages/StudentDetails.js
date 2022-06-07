@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import {useHistory} from "react-router-dom";
 import axios from 'axios';
 import Header from '../components/Header.js'
 import jwt from 'jsonwebtoken'
 
 const item=[];
-const searchData=[];
-const email='';
+
 
 export default class studentDetails extends React.Component{
 

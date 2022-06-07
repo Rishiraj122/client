@@ -11,23 +11,6 @@ const MenuUpdate = () =>{
     const [vegfood,setVegfood]=useState('');
     const [nonvegfood,setNonvegfood]=useState('');
 
-    const logout=()=>{
-        window.localStorage.clear();//to clear the localstorage of the user, so when 
-                                    //a user logs out it's login local storage is cleared
-        window.location.href='/login'
-    }
-
-    const vendor=()=>{
-        window.location.href='/vendordisplay'
-    }
-
-    const roomClean=()=>{
-        window.location.href='/roomclean'
-    }
-
-    const messBill=()=>{
-        window.location.href='/messbill'
-    }
 
     async function publishFood(event){
         event.preventDefault();

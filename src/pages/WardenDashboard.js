@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import jwt from 'jsonwebtoken'
 import { useHistory } from 'react-router-dom'
 

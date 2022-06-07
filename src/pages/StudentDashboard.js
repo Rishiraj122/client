@@ -32,7 +32,7 @@ const StudentDashboard = () => {
 	const [address, setAddress] = useState([])
 	const [roll, setRoll] = useState([])
 	const [registration, setRegistration] = useState([])
-	const [clean, setClean] = useState([]);
+	// const [clean, setClean] = useState([]);
 	const [room, setRoom] = useState([]);
 	const [isClean, setIsClean]=useState([]);
 	const [gender, setGender] = useState([]);

@@ -6,9 +6,9 @@ import Header from '../components/Header.js'
 const MenuDisplay=()=>{
     const history=useHistory()
 
-    const goback=()=>{
-        window.location.href='/studentdashboard'
-    }
+    // const goback=()=>{
+    //     window.location.href='/studentdashboard'
+    // }
 
     const [foodname,setFoodname]=useState([]);
     const [bvegfood,bsetVegfood]=useState([]);

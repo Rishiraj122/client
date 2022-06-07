@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
-import {useHistory} from "react-router-dom";
-import axios from 'axios';
+import React from 'react';
 import Header from './Header.js'
 import jwt from 'jsonwebtoken'
 
 const item=[];
 const notAllotted=[];
-const searchData=[];
-const email='';
 
 export default class AllottedStudents extends React.Component{
     

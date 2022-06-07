@@ -1,9 +1,7 @@
-import React,{useState, useEffect} from 'react';
-import { useHistory } from "react-router-dom";
+import React,{useState} from 'react';
 import Header from './Header';
 
 const ForgotPassword=()=>{
-    const history=useHistory();
 
     const [email,setEmail]=useState('');
     const [phone,setPhone]=useState('');

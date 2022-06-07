@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import jwt from 'jsonwebtoken'
 import { useHistory } from 'react-router-dom'
 
 const StaffDashboard = () =>{
     const history = useHistory();//history instance a react hook
-
-    const [foodname,setFoodname]=useState('');
-    const [main,setMain]=useState('');
-    const [vegfood,setVegfood]=useState('');
-    const [nonvegfood,setNonvegfood]=useState('');
 
     const logout=()=>{
         window.localStorage.clear();//to clear the localstorage of the user, so when 

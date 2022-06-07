@@ -11,11 +11,6 @@ const Vendor=()=>{
     const[fooditem,setFooditem]=useState('');
     const[payment,setPayment]=useState('');
 
-    const logout=()=>{
-        window.localStorage.clear();
-        window.location.href='/login'
-    }
-
     async function addVendor(event){
         event.preventDefault();
 

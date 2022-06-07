@@ -1,8 +1,6 @@
 import React,{useEffect, useState} from "react";
 import { useHistory } from "react-router-dom";
 import jwt from "jsonwebtoken";
-import GooglePayButton from '@google-pay/button-react';
-import HostelBill from "./HostelBill";
 import Header from './Header'
 
 function loadScript(src) {

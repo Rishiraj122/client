@@ -1,8 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import Header from './Header'
 import axios from 'axios';
-import Sidebar from 'react-sidebar';
 import jwt from 'jsonwebtoken'
 
 const item=[];
@@ -37,17 +35,6 @@ export default class Fetch extends React.Component{
             }           
             i++;
         }
-
-        // for(let i=0;i<data.user.length;i=i+1){
-        //     this.setState({person: data, loading: false})
-            
-        //     item.push(data.user[i]);
-        //     console.log(data.user[0]);
-        //     // if(i==data.user.length-1){
-        //     //     alert(yay)
-        //     //     item.push(data.user[i+1]);
-        //     // }
-        // }
     }
 
     async delete(value){
