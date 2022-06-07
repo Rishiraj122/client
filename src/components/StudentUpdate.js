@@ -73,18 +73,19 @@ return(
             </select>
             <br/>
             
-            {/* <input className="input-control2 dropdown-text rounded-pill" type="date" placeholder="&#xf133;   Date of Birth" 
+            <input
+                className='input-control2 dropdown-text rounded-pill' type="date" placeholder="&#xf133;   Date of Birth"
                 value={dob}
-				onChange={(e) => setDob(e.target.value)}
-				type="text"
-				max="2004-06-01"
-				placeholder="&#xf133;   Date of Birth"
-				onFocus={(e)=>(e.target.type="date")}
+                onChange={(e)=>setDob(e.target.value)}
+                max="2004-06-01"
+                onFocus={(e)=>(e.target.type="date")}
 				onBlur={(e)=>(e.target.type="date")}
 				class="dropdown-text input-control rounded-pill"
 				required
-            /> */}
+            />
             <br/>
+
+            
             
             <input
                 value={address}
