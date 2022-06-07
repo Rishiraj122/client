@@ -38,6 +38,7 @@ const App = () => {
 			<Router>
 				<Routes>
 					<Route path="/" element = {<FrontPage/>} />
+					<Route path="/studentlogin" element={<StudentLogin/>} />
 					{/* <Route path="/login" exact component={Login} />
 					<Route path="/register" exact component={Register} />
 					<Route path="/studentdashboard" exact component={StudentDashboard} />
@@ -48,7 +49,7 @@ const App = () => {
 					<Route path="/noticedisplay" exact component={NoticeDisplay} />
 					<Route path="/studentregistration" exact component={StudentRegistration} />
 					
-					<Route path="/studentlogin" exact component={StudentLogin} />
+
 					<Route path="/studentdetails" exact component={StudentDetails} />
 					<Route path="/adminNotice" exact component={AdminNotice} />
 					<Route path="/roomallotment" exact component={RoomAllotment} />

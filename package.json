@@ -22,7 +22,8 @@
     "react-sidenav": "^4.0.6",
     "react-to-pdf": "0.0.14",
     "semantic-ui-react": "^2.1.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "node":"14.18.1"
   },
   "scripts": {
     "start": "react-scripts start",
