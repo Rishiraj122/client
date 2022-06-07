@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: white;
+}
+
+h1{
+  color:#46244C;
+  font-size: 2.8rem;
+  padding:1.5rem;
+}
+
+h5{
+  padding:2%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+
+h6{
+  margin-left:4%;
+}
+
+hr{
+  color:#cbb5cc;
+  text-align: right;
+  width:13rem;
+  margin-top:-0.8rem;
+  padding: 0.1rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button{
+  width:7rem;
+}
+
+.btn-explore{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.10) 0px 15px 12px;
+}
+
+/* TABLE */
+.tbl{
+  overflow-x: auto; 
+  /* to make the table responsive with a horizontal scroll bar */
+}
+
+td{
+ font-size:0.9rem;
+ color:white;
+}
+
+th{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: smaller;
+  font-style: italic;
+}
+
+tr:nth-child(odd){
+  background-color: #693572;
+}
+
+tr:nth-child(even){
+  background-color: #46244C;
+}
+
+/* Numbering table rows */
+.css-serial{
+  counter-reset: serial-number;
+}
+.css-serial td:first-child:before{
+  counter-increment: serial-number;
+  content: counter(serial-number);
+}
+
+/* NAVBAR */
+.navbar{
+  background-color: #46244C;
+  padding:2rem;
+  margin-bottom:2%;
+ 
+}
+
+.navbar-nav{
+  margin-left:auto;
+}
+.nav-icon{
+  color: white;
+}
+
+.btn-dark{
+  background-color:#46244C;
+  color:white;
+}
+
+.btn-dark:hover{
+  background-color: #693572;
+  color: white;
+}
+
+.btn-light{
+  background-color: #dfdce0;
+  color:#46244C;
+}
+
+.btn-light:hover{
+  background-color: #bcb5be;
+  color:#46244C;
+}
+
+/* DASHBOARD */
+.btn-dashboard{
+  width:24rem;
+  text-align: left;
+  height:3.2rem;
+  font-size: 1.1rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+.dashboard-icon{
+  padding: 10px;
+  margin-left:0.5rem;
+  margin-right: 1rem;
+}
+
+.btn-col{
+  padding-top:4%;
+  padding-bottom:5%;
+}
+
+.dashboard-img{
+  width:27rem;
+  padding: 5%;
+}
+
+/* NOTICE COMPONENTS*/
+.notice-box{
+  width: 80%;
+  margin:2rem auto 3rem auto;
+  text-align:left;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.alert{
+  background-color: #ddd0dd;
+}
+
+.notice-hr{
+  color:#46244C;
+  margin-left:4%;
+  width:80%;
+  padding:0%;
+  margin-top: 1%;
+}
+
+.notice-text{
+  padding-left:4%;
+  padding-right:4%;
+  color:#46244C;
+}
+
+.notice-title{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom:1%;
+  line-height: 1rem;
+  font-style: italic;
+  color:#46244C;
+}
+
+.notice{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left:4%;
+  padding-right:4%;
+  letter-spacing:-0.5px;
+  font-style: italic;
+}
+
+.notice-btn{
+  margin:1% 3.5%;
+  width:250px;
+}
+
+/* STUDENT LOGIN */
+.forgot-password{
+  text-decoration: none;
+  color:#693572;
+  font-size:small;
+  padding-bottom:0%;
+  margin-bottom:0%;
+}
+
+.forgot-password:hover{
+  color: #46244C;
+}
+
+.input-control{
+  margin:1rem;
+  padding:0.7rem 1.35rem;
+  size: 30;
+  width:18rem;
+  outline: 0;
+  /* border-top:0px;
+  border-right:0px;
+  border-left: 0px;
+  border-bottom:1px solid; */
+  border-color: #46244C;
+  font-family: FontAwesome, Montserrat; 
+  /* Use FontAwesome font family for the font awesome icon in placeholder to work*/
+}
+
+.btn-control{
+  padding:0.7rem 1.35rem;
+  size: 30;
+  width:18rem;
+  outline: 0;
+  border-color: #dfdce0;
+}
+
+.input-control2{
+  margin:1%;
+  padding:0.7rem 1.35rem;
+  outline: 0;
+  width:18rem;
+  size: 30;
+  font-family: FontAwesome, Montserrat; 
+  /* Use FontAwesome font family for the font awesome icon in placeholder to work*/
+}
+
+.rounded-pill{
+  border-width: thin;
+}
+
+.input-control3{
+  margin:0.5%;
+  padding:1.35rem;
+  size: 40;
+  outline: 0; 
+}
+
+.dropdown-text{
+  color:gray;
+}
+
+
+/* ALLOTED STUDENTS */
+.search-bar{
+  font-family: FontAwesome, Montserrat; 
+  margin:1%;
+  padding:0.6rem;
+  size: 30;
+  outline: 0;
+}
+
+.clr-btn
+{
+  width:200px;
+  padding: 0.6rem;
+}
+
+/* FORGOT PASSWORD */
+
+.box{
+  background-color:"white";
+  width: 72%;
+  margin:5% auto;
+  padding:3%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* STUDENT DETAILS */
+.details{
+    color:#693572;
+    padding-left:5%;
+    font-weight:100;
+    color:#bcb5be;
+}
+
+.details-input{
+    color:black;
+    padding-left:5%;
+    font-weight:100;
+    color:white;
+}
+
+.details-table{
+  background-color: #46244C;
+  text-align: left;
+  width:50%;
+  margin:0 auto;
+  margin-bottom:5%;
+}
+
+/* MENU */
+
+.card{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin:5% 2%;
+}
+
+.card-title{
+  font-weight:600;
+}
+
+.card-img-top{
+  width:13rem;
+  margin:auto;
+}
+
+.list-group-item{
+  text-align: left;
+}
+
+/* MESS BILL */
+
+
+.form-check-label{
+  text-align:left;
+  vertical-align: middle;
+  display: inline-block;
+  width: 85px;
+}
+
+/* VENDOR */
+.form1{
+  display: table;
+  padding-left:25%;
+  padding-right:25%;
+}
+
+.label1{
+  display: table-cell;
+}
+
+.input1{
+  display: table-cell;
+  outline: 0;
+  padding: 0.35rem;
+  width:15rem;
+}
+
+option{
+  color:black;
+}
