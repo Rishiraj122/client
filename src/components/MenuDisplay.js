@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import jwt from 'jsonwebtoken'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header.js'
 
 const MenuDisplay=()=>{
-    const history=useHistory()
+    const navigate=useNavigate()
 
     // const goback=()=>{
     //     window.location.href='/studentdashboard'
@@ -32,12 +32,12 @@ const MenuDisplay=()=>{
             const user = jwt.decode(token);
             if(!user){
                 localStorage.removeItem('token');
-                history.replace('/studentlogin');
+                navigate('/studentlogin');
             }else{
                 getData();                
             }
         } else{
-            history.push('/studentlogin');
+            navigate('/studentlogin');
         }
     })
     const getData=()=>{

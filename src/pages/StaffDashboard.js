@@ -1,9 +1,9 @@
 import React, { useEffect} from 'react'
 import jwt from 'jsonwebtoken'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const StaffDashboard = () =>{
-    const history = useHistory();//history instance a react hook
+    const navigate = useNavigate();//history instance a react hook
 
     const logout=()=>{
         window.localStorage.clear();//to clear the localstorage of the user, so when 
@@ -36,7 +36,7 @@ const StaffDashboard = () =>{
         const token = localStorage.getItem('token');
         if(!token) {
             const user = jwt.decode(token) // for authentication
-            history.push('/login'); //if authentication fails load the login page
+            navigate('/login'); //if authentication fails load the login page
         }
       })
 

@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 
 function Register() {
-	const history = useHistory()
+	const navigate = useNavigate()
 
 	const [name, setName] = useState('') //the first value is current state and second value is function used to update our state
 	const [email, setEmail] = useState('')
@@ -31,7 +31,7 @@ function Register() {
 		const data = await response.json()
 
 		if (data.status === 'ok') {
-			history.push('/login') // if registration is successfull 
+			navigate('/login') // if registration is successfull 
 		}
 	}
 

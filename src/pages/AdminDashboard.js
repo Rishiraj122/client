@@ -1,9 +1,9 @@
 import React, { useEffect} from 'react'
 import jwt from 'jsonwebtoken'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const AdminDashboard = () =>{
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const addStudent=()=>{
         window.location.href='/studentregistration'
@@ -33,7 +33,7 @@ const AdminDashboard = () =>{
         const token = localStorage.getItem('token');
         if(!token) {
             const user = jwt.decode(token)
-            history.push('/login');
+            navigate('/login');
         }
       })
 

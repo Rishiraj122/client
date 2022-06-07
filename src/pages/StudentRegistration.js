@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header.js'
 
 //name phone address roll registration email password
 function StudentRegistration() {
-const history = useHistory()
+const navigate = useNavigate()
 
 const [name, setName] = useState('') //the first value is current state and second value is function used to update our state
 const [phone, setPhone] = useState('')
@@ -42,7 +42,7 @@ async function registerUser(event) {
 	const data = await response.json()
 
 	if (data.status === 'ok') {
-		history.push('/studentlogin') // if registration is successfull 
+		navigate('/studentlogin') // if registration is successfull 
 	}
 }
 

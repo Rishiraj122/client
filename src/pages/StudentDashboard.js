@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import jwt from 'jsonwebtoken'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const StudentDashboard = () => {
-	const history = useHistory()
+	const navigate = useNavigate()
 
 	const notice=()=>{
 		window.location.href='/noticedisplay'
@@ -47,12 +47,12 @@ const StudentDashboard = () => {
 			const user = jwt.decode(token)
 			if (!user) {
 				localStorage.removeItem('token')
-				history.replace('/studentlogin')
+				navigate('/studentlogin')
 			} 
 			apiGet();
 		}
 		else{
-			history.push('/studentlogin')
+			navigate('/studentlogin')
 		}
 	}, [])
 

@@ -1,10 +1,10 @@
 import React,{useEffect, useState} from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from './Header'
 import jwt from 'jsonwebtoken'
 
 const HostelBill=()=>{
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const [hostelbill,setHostelbill]=useState('');
     const [commonbill,setCommonbill]=useState('');
@@ -64,7 +64,7 @@ const HostelBill=()=>{
         const token = localStorage.getItem('token');
         if(!token) {
             const user = jwt.decode(token) // for authentication
-            history.push('/login'); //if authentication fails load the login page
+            navigate('/login'); //if authentication fails load the login page
         }
     })
 

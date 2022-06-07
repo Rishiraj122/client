@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import jwt from "jsonwebtoken";
 import Header from './Header'
 
@@ -18,7 +18,7 @@ function loadScript(src) {
   }
   
 const MyBill=()=>{
-    const history=useHistory();
+    const navigate=useNavigate();
     const [messbill, setMessbill]=useState('');
     const [hostelbill, setHostelbill]=useState('');
     const [roll, setRoll]=useState('');
@@ -31,12 +31,12 @@ const MyBill=()=>{
             const user = jwt.decode(token)
             if(!user){
                 localStorage.removeItem('token');
-                history.replace('/login')
+                navigate('/login')
             }
             getBill();
         }
         else{
-            history.push('/login')
+            navigate('/login')
         }
     })
 

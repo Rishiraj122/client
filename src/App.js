@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login';
 import Register from './pages/Register';
 import StudentDashboard from './pages/StudentDashboard';
@@ -35,37 +35,39 @@ import StudentMyDetails from './components/StudentMyDetails'
 const App = () => {
 	return (
 		<div>	
-			<BrowserRouter>
-				<Route path="/login" exact component={Login} />
-				<Route path="/register" exact component={Register} />
-				<Route path="/studentdashboard" exact component={StudentDashboard} />
-				<Route path="/logout" exact component={Logout} />
-				<Route path="/admindashboard" exact component={AdminDashboard} />
-				<Route path="/wardendashboard" exact component={WardenDashboard} />
-				<Route path="/notice" exact component={Notice} />
-				<Route path="/noticedisplay" exact component={NoticeDisplay} />
-				<Route path="/studentregistration" exact component={StudentRegistration} />
-				<Route path="/" exact component = {FrontPage} />
-				<Route path="/studentlogin" exact component={StudentLogin} />
-				<Route path="/studentdetails" exact component={StudentDetails} />
-				<Route path="/adminNotice" exact component={AdminNotice} />
-				<Route path="/roomallotment" exact component={RoomAllotment} />
-				<Route path="/allottedstudents" exact component={AllottedStudents} />
-				<Route path="/staffdashboard" exact component={StaffDashboard} />
-				<Route path="/menudisplay" exact component={MenuDisplay} />
-				<Route path="/vendor" exact component={Vendor} />
-				<Route path="/vendordisplay" exact component={VendorDisplay} />
-				<Route path="/roomclean" exact component={RoomClean} />
-				<Route path="/messbill" exact component={MessBill} />
-				<Route path="/mybill" exact component={MyBill} />
-				<Route path="/hostelbill" exact component={HostelBill} />
-				<Route path="/forgotpassword" exact component={ForgotPassword} />
-				<Route path="/studentupdate" exact component={StudentUpdate} />
-				<Route path="/generatereport" exact component={GenerateReport} />
-				<Route path="/menuupdate" exact component={MenuUpdate}/>
-				<Route path="/studentmydetails" exact component={StudentMyDetails}/>
-
-			</BrowserRouter>
+			<Router>
+				<Routes>
+					<Route path="/" element = {<FrontPage/>} />
+					{/* <Route path="/login" exact component={Login} />
+					<Route path="/register" exact component={Register} />
+					<Route path="/studentdashboard" exact component={StudentDashboard} />
+					<Route path="/logout" exact component={Logout} />
+					<Route path="/admindashboard" exact component={AdminDashboard} />
+					<Route path="/wardendashboard" exact component={WardenDashboard} />
+					<Route path="/notice" exact component={Notice} />
+					<Route path="/noticedisplay" exact component={NoticeDisplay} />
+					<Route path="/studentregistration" exact component={StudentRegistration} />
+					
+					<Route path="/studentlogin" exact component={StudentLogin} />
+					<Route path="/studentdetails" exact component={StudentDetails} />
+					<Route path="/adminNotice" exact component={AdminNotice} />
+					<Route path="/roomallotment" exact component={RoomAllotment} />
+					<Route path="/allottedstudents" exact component={AllottedStudents} />
+					<Route path="/staffdashboard" exact component={StaffDashboard} />
+					<Route path="/menudisplay" exact component={MenuDisplay} />
+					<Route path="/vendor" exact component={Vendor} />
+					<Route path="/vendordisplay" exact component={VendorDisplay} />
+					<Route path="/roomclean" exact component={RoomClean} />
+					<Route path="/messbill" exact component={MessBill} />
+					<Route path="/mybill" exact component={MyBill} />
+					<Route path="/hostelbill" exact component={HostelBill} />
+					<Route path="/forgotpassword" exact component={ForgotPassword} />
+					<Route path="/studentupdate" exact component={StudentUpdate} />
+					<Route path="/generatereport" exact component={GenerateReport} />
+					<Route path="/menuupdate" exact component={MenuUpdate}/>
+					<Route path="/studentmydetails" exact component={StudentMyDetails}/> */}
+				</Routes>
+			</Router>
 		</div>
 	)
 }

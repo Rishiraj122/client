@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import jwt from 'jsonwebtoken'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header.js'
 
 const StudentMyDetails = () => {
-	const history = useHistory()
+	const navigate = useNavigate()
 
 	const [data, setData]= useState([])
 	const [phone, setPhone] = useState([])
@@ -29,12 +29,12 @@ const StudentMyDetails = () => {
 			const user = jwt.decode(token)
 			if (!user) {
 				localStorage.removeItem('token')
-				history.replace('/studentlogin')
+				navigate('/studentlogin')
 			} 
 			apiGet();
 		}
 		else{
-			history.push('/studentlogin')
+			navigate('/studentlogin')
 		}
 	}, [])
 

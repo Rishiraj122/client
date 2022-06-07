@@ -1,10 +1,10 @@
 import React,{useEffect,useState} from "react";
 import jwt from 'jsonwebtoken';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
 const Vendor=()=>{
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const[name,setName]=useState('');
     const[phone,setPhone]=useState('');
@@ -30,7 +30,7 @@ const Vendor=()=>{
         const data=await response.json();
         if(data.status=='ok'){
             alert('Vendor Added')
-            history.push('/staffdashboard');
+            navigate('/staffdashboard');
         } 
     }
 
@@ -39,7 +39,7 @@ const Vendor=()=>{
         const token = localStorage.getItem('token');
         if(!token) {
             const user = jwt.decode(token) // for authentication
-            history.push('/login'); //if authentication fails load the login page
+            navigate('/login'); //if authentication fails load the login page
         }
     })
 

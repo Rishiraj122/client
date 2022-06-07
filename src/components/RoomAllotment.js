@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Header from './Header.js'
 import jwt from 'jsonwebtoken'
 
 function RoomAllotment() {
-	const history = useHistory()
+	const navigate = useNavigate()
 
 	const [room, setRoom]= useState([])
 	const [roll, setRoll]=useState([])
@@ -84,12 +84,12 @@ function RoomAllotment() {
 			const user = jwt.decode(token)
 			if (!user) {
 				localStorage.removeItem('token')
-				history.replace('/studentlogin')
+				navigate('/studentlogin')
 			} 
 
 		}
 		else{
-			history.push('/studentlogin')
+			navigate('/studentlogin')
 		}
 	}, [])
 

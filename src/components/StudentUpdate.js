@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import jwt from 'jsonwebtoken'
 
 const StudentUpdate=()=>{
 
-const history=useHistory();
+const navigate=useNavigate();
 
 const[roll,setRoll]=useState('');
 const[name,setName]=useState('');
@@ -50,7 +50,7 @@ useEffect(() => { //useEffect react hook to tell React that
     if(!token) {
         const user = jwt.decode(token) // for authentication
         alert("Error")
-        history.push('/admindashboard')//if authentication fails load the login page
+        navigate('/admindashboard')//if authentication fails load the login page
     }
 })
 
